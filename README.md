@@ -11,7 +11,9 @@ Basic wallet functionality includes:
 - **transfer** - Transfer funds (in lumens) between 2 test accounts. The passphrase is needed to perform this operation.
 - **transactions** - Query account transactions for a Stellar test account.
 
-Account keys, pubic key and secret seed, are hashed or encrypted to limit exposure. The create, import, and transfer functions are further secured by a user chosen passphrase. The balance and transaction query functions are public within the Stellar network so no passphrase is needed.
+Account keys, pubic key and secret seed, are hashed or encrypted to eliminate exposure. Keys are stored in the cloud and never stored store locally on the end user's computer. 
+
+The create, import, and transfer functions are further secured by a user chosen passphrase. The balance and transaction query functions are public within the Stellar network so no passphrase is needed.
 
 See also the [Stellar Test Wallet Key Server](https://github.com/programming4phone/StellarTestWalletKeyServer "Stellar Test Wallet Key Server").
 
