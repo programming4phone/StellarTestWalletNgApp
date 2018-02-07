@@ -2,11 +2,11 @@
 
 **This project is currently a work in progress.**
 
-This projects implements basic wallet functionality to manage Stellar test accounts. Access to the wallet is secured by Google Authentication.
+This project implements basic wallet functionality to manage Stellar test accounts. Access to the wallet is secured by Google Authentication.
 
 Basic wallet functionality includes:
 - **create** -  Create a test account using the Stellar Friendbot and an accompanying passphrase.
-- **import** - Import an existing test account into the wallet using a passphrase and the account's secret seed. The secret seed is encrypted and stored a secure cloud server.
+- **import** - Import an existing test account into the wallet using a passphrase and the account's secret seed. The secret seed is encrypted and stored on a secure cloud server.
 - **balances** - Query account balances for a Stellar test account.
 - **transfer** - Transfer funds (in lumens) between 2 test accounts. The passphrase is needed to perform this operation.
 - **transactions** - Query account transactions for a Stellar test account.
