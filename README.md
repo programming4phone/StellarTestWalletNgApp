@@ -15,7 +15,7 @@ Account keys, pubic key and secret seed, are hashed or encrypted to eliminate ex
 
 The create, import, and transfer functions are further secured by a user chosen passphrase. The balance and transaction query functions are public within the Stellar network so no passphrase is needed.
 
-See also the [Stellar Test Wallet Key Server](https://github.com/programming4phone/StellarTestWalletKeyServer "Stellar Test Wallet Key Server").
+Also see the [Stellar Test Wallet Key Server](https://github.com/programming4phone/StellarTestWalletKeyServer "Stellar Test Wallet Key Server") project.
 
 For further details about Stellar accounts see <https://www.stellar.org/developers/guides/get-started/create-account.html>.
 
