@@ -4,5 +4,8 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  stellarHorizonUrl: 'https://horizon-testnet.stellar.org',
+  webserviceHostUrl: 'http://localhost:8080',
+  clientId: '148646630769-b22eni5098ug3htaat13hh14i3ubs7r0.apps.googleusercontent.com'
 };

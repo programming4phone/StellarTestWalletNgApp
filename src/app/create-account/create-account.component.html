@@ -1,0 +1,53 @@
+<p-growl [(value)]="msgs" [sticky]="false" [life]="10000"></p-growl>
+<div class="ui-g">
+	<div class="ui-g-12"><h2 class="panel-title-text">Create Test Account</h2></div>
+	<div class="ui-g-8">
+		<p-panel [showHeader]="false">
+			<div class="ui-g">
+
+				<div class="ui-g-2"><label for="pphrase">Passphrase</label></div>
+				<div class="ui-g-1"><input id="pphrase" type="text" size="100" pInputText [(ngModel)]="inpPassphrase"/></div>
+				<div class="ui-g-9"></div>
+	
+				<div class="ui-g-2"></div>
+				<div class="ui-g-2"><button pButton type="button" (click)="createTestAccount();" label="Create"></button></div>
+				<div class="ui-g-8"></div>
+			</div>
+		</p-panel>
+	</div>
+	<div class="ui-g-4"></div>
+</div>
+
+<div class="ui-g" *ngIf="showSpinner">
+	<div class="ui-g-5"></div>
+	<div class="ui-g-2">
+		<p-progressSpinner [style]="{width: '50px', height: '50px'}" strokeWidth="8" fill="#EEEEEE" animationDuration=".5s"></p-progressSpinner>
+	</div>
+	<div class="ui-g-5"></div>
+</div>
+
+<div class="ui-g" *ngIf="showPanel">
+	<div class="ui-g-8">
+		<p-panel [showHeader]="false">
+			<div class="ui-g">
+  				<div class="ui-g-12"><h3>Test Account Created</h3></div>
+  				
+				<div class="ui-g-2">Account ID: </div>
+				<div class="ui-g-4">{{ _accountId }}</div>
+				<div class="ui-g-6"></div>
+				
+				<div class="ui-g-2">Secret Seed: </div>
+				<div class="ui-g-4">{{ _secretSeed }}</div>
+				<div class="ui-g-6"></div>
+				
+				<div class="ui-g-2"></div>
+        <div class="ui-g-10">IMPORTANT!!! Print this page for your records. DO NOT LOSE IT!!!</div>
+        
+        <div class="ui-g-2"></div>
+				<div class="ui-g-10">The secret seed and your passphrase are needed to recover your account if it is deleted from the wallet!</div>
+
+			</div>
+		</p-panel>
+	</div>
+	<div class="ui-g-4"></div>
+</div>
