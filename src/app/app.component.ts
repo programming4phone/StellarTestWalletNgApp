@@ -3,6 +3,7 @@ import { TabMenuModule } from 'primeng/components/tabmenu/tabmenu';
 import { MenuItem } from 'primeng/components/common/menuitem';
 import { environment } from '../environments/environment';
 import { SigninService } from './services/signin.service';
+import { Router } from '@angular/router';
 
 declare const gapi: any;
 
@@ -21,7 +22,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   _profileImageUrl: any;
   _profileEmail: any;
 
-  constructor(private signinService: SigninService, private ngZone: NgZone) {
+  constructor(private signinService: SigninService, private router: Router, private ngZone: NgZone) {
     // The onSignIn method is not executed without this code
     window['onSignIn'] = (user) => ngZone.run(() => this.onSignIn(user));
   }
@@ -50,6 +51,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   public onSignIn = (googleUser) => {
+    this.router.navigate(['home']); // must be done first otherwise tabs do not render properly
     console.log(this);
     const profile: gapi.auth2.BasicProfile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId());

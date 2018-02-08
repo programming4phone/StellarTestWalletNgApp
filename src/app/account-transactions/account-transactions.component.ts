@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Message } from 'primeng/components/common/api';
 import { AccountTransaction } from '../entities/account-transaction.model';
 import { environment } from '../../environments/environment';
-
 const StellarSdk = require('stellar-sdk');
 
 @Component({
@@ -58,8 +57,14 @@ export class AccountTransactionsComponent implements OnInit {
     // })
     .catch((err) => {
       console.log(err);
+      let errMsg: string;
+      if (err.name === 'NotFoundError') {
+        errMsg = 'Invalid Account ID';
+      } else {
+        errMsg = err.name;
+      }
       this.msgs = [];
-      this.msgs.push({severity: 'error', summary: 'Account Transactions', detail: err });
+      this.msgs.push({severity: 'error', summary: 'Account Transactions', detail: errMsg });
       this.showSpinner = false;
       this.showPanel = false;
     });

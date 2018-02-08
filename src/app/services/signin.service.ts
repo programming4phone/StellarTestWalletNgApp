@@ -16,7 +16,12 @@ export class SigninService {
   constructor(private router: Router) { }
 
   public signOut() {
+    // reinitialize all signin related variables, leave no trace!
     this.authenticated = false;
+    this.idToken = '';
+    this.profileName = '';
+    this.profileImageUrl = '';
+    this.profileEmail = '';
     this.router.navigate(['home']); // must be done first otherwise tabs do not render properly
     const auth2: any = gapi.auth2.getAuthInstance();
     auth2.signOut().then(() => {

@@ -54,10 +54,12 @@ export class AccountBalanceComponent implements OnInit {
         this.showPanel = true;
       })
       .catch((err) => {
+        console.log(err);
         this.handleError(err);
       });
     } catch (err) {
-      this.handleError(err.message);
+      console.log(err);
+      this.handleError('Invalid Account ID.');
     }
   }
 

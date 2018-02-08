@@ -3,8 +3,10 @@
 	<div class="ui-g-8">
 		<p class="splash-text">
         This project implements basic wallet functionality to manage Stellar test accounts. 
-        Access to the wallet is secured by Google Authentication. It is highly recommended that you enable 
-        two factor authentication for the Google account used with this application.
+        Access to the wallet is secured by Google Authentication, so the end user must have a 
+        valid Google account. Since this application allows financial transactions, it is highly 
+        recommended that <a href="https://www.google.com/landing/2step/" target="_blank" >2 step verification</a> 
+        be enabled for the Google account used with this application.
     </p>
 
     <p class="splash-text">
@@ -14,14 +16,19 @@
     <ul>
         <li class="splash-text"><b><u>create</u></b>&nbsp;Create a test account using the Stellar Friendbot and an accompanying passphrase.</li>
         <li class="splash-text"><b><u>import</u></b>&nbsp;Import an existing test account into the wallet using a passphrase and the account's secret seed. The secret seed is encrypted and stored on a secure cloud server.</li>
-        <li class="splash-text"><b><u>balances</u></b>&nbsp;Query account balances for a Stellar test account.</li>
+        <li class="splash-text"><b><u>balances</u></b>&nbsp;Query Stellar test account balances.</li>
         <li class="splash-text"><b><u>transfer</u></b>&nbsp;Transfer funds (in lumens) between 2 test accounts. The passphrase is needed to perform this operation.</li>
-        <li class="splash-text"><b><u>transactions</u></b>&nbsp;Query account transactions for a Stellar test account.</li>
+        <li class="splash-text"><b><u>transactions</u></b>&nbsp;Query Stellar test account transactions.</li>
     </ul>
 
     <p class="splash-text">
         Account keys, pubic key and secret seed, are hashed or encrypted to eliminate exposure. Keys are stored in the cloud and never stored store locally on the end user's computer. 
         The create, import, and transfer functions are further secured by a user chosen passphrase. The balance and transaction query functions are public within the Stellar network so no passphrase is needed.
+    </p>
+
+    <p class="splash-text">
+        An optimal passphrase will consist of a long string of words that is not easily guessed. 
+        <br/>For example, <i>chicago weather cold phoenix weather hot</i>
     </p>
 
     <p class="splash-text">
@@ -31,6 +38,12 @@
     <p class="splash-text">
         For further details about Google Authentication Services see <a href="https://developers.google.com/identity/sign-in/web/sign-in" target="_blank">https://developers.google.com/identity/sign-in/web/sign-in</a>.
     </p>
+
+    <p class="splash-text">
+        For further details about Google Authentication 2 Step Verification see <a href="https://www.google.com/landing/2step/" target="_blank">https://www.google.com/landing/2step/</a>.
+    </p>
+
+
   </div>
 </div>
 

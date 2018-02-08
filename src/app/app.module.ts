@@ -13,6 +13,7 @@ import { PanelModule } from 'primeng/components/panel/panel';
 import { RadioButtonModule } from 'primeng/components/radiobutton/radiobutton';
 import { TableModule } from 'primeng/components/table/table';
 import { ProgressSpinnerModule } from 'primeng/components/progressspinner/progressspinner';
+import { PasswordModule } from 'primeng/components/password/password';
 
 import { AppComponent } from './app.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
@@ -56,6 +57,7 @@ import { GoogleSignInComponent } from 'angular-google-signin';
     RadioButtonModule,
     TableModule,
     ProgressSpinnerModule,
+    PasswordModule,
     AppRoutingModule
   ],
   providers: [WalletKeyService, SigninService, AuthGuard],

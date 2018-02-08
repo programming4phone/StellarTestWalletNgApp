@@ -6,11 +6,11 @@
 			<div class="ui-g">
 
 				<div class="ui-g-2"><label for="pphrase">Passphrase</label></div>
-				<div class="ui-g-1"><input id="pphrase" type="text" size="85" pInputText [(ngModel)]="inpPassphrase"/></div>
+				<div class="ui-g-1"><input id="pphrase" type="password" size="85" pPassword  [(ngModel)]="inpPassphrase"/></div>
 				<div class="ui-g-9"></div>
 
 				<div class="ui-g-2"><label for="sseed">Secret Seed</label></div>
-				<div class="ui-g-1"><input id="sseed" type="text" size="85" pInputText [(ngModel)]="inpSecretSeed"/></div>
+				<div class="ui-g-1"><input id="sseed" type="password" size="85" pPassword [feedback]="false" [(ngModel)]="inpSecretSeed"/></div>
 				<div class="ui-g-9"></div>
 			
 				<div class="ui-g-2"></div>
