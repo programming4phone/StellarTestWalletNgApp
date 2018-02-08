@@ -1,15 +1,13 @@
-# StellarTestWalletNgApp
-
-**This project is currently a work in progress.**
+# Stellar Test Wallet Ng App
 
 This project implements basic wallet functionality to manage Stellar test accounts. Access to the wallet is secured by Google Authentication.
 
 Basic wallet functionality includes:
 - **create** -  Create a test account using the Stellar Friendbot and an accompanying passphrase.
 - **import** - Import an existing test account into the wallet using a passphrase and the account's secret seed. The secret seed is encrypted and stored on a secure cloud server.
-- **balances** - Query account balances for a Stellar test account.
+- **balances** - Query Stellar test account balances.
 - **transfer** - Transfer funds (in lumens) between 2 test accounts. The passphrase is needed to perform this operation.
-- **transactions** - Query account transactions for a Stellar test account.
+- **transactions** - Query Stellar test account transactions.
 
 Account keys, pubic key and secret seed, are hashed or encrypted to eliminate exposure. Keys are stored in the cloud and never stored store locally on the end user's computer. 
 
